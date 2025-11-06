@@ -1,4 +1,10 @@
 import React, { useMemo, useRef } from "react";
+import perfil from "./assets/ali.jpg";
+import portifolio from "./assets/portifolio.png";
+import kawasaki from "./assets/kawasaki.jpg";
+import calendarioWeb from "./assets/calendario-web.png";
+import triss from "./assets/triss.jpg";
+import robo from "./assets/robo.jpg";
 import {
   motion,
   useScroll,
@@ -24,7 +30,7 @@ const PROFILE = {
   name: "Alison Fernando",
   role: "Desenvolvedor Front-end & Analista de Sistemas",
   location: "Viradouro, São Paulo, Brasil",
-  photoUrl: "../src/assets/ali.jpg",
+  photoUrl: { perfil },
   about:
     "Crio experiências digitais com foco em clareza, velocidade e impacto visual. Curto resolver problemas complexos com interfaces simples, dados bem contados e microinterações que dão vida à página.",
   skills: [
@@ -62,15 +68,15 @@ const PROJECTS = [
     blurb:
       "Esta própria página: animações suaves, ícones flutuantes e timeline com progress bar de scroll.",
     stack: ["React", "Framer Motion", "Tailwind"],
-    image: "../src/assets/portifolio.png",
+    image: { portifolio },
     live: "#",
-    repo: "#",
+    repo: "https://github.com/AlisonFernando/meu-portifolio",
   },
   {
     title: "Site temático da moto Kawasaki H2R",
     blurb: "Lading page de exibição da moto Kawasaki H2R.",
     stack: ["HTML5", "CSS3", "JS"],
-    image: "../src/assets/kawasaki.jpg",
+    image: { kawasaki },
     live: "#",
     repo: "https://github.com/AlisonFernando/Kawasaki-Ninja-H2",
   },
@@ -78,7 +84,7 @@ const PROJECTS = [
     title: "Caléndario Web",
     blurb: "Calendário estilizado e dinâmico.",
     stack: ["HTML5", "CSS3", "JS"],
-    image: "../src/assets/calendario-web.png",
+    image: { calendarioWeb },
     live: "#",
     repo: "https://github.com/AlisonFernando/Calendario",
   },
@@ -95,7 +101,7 @@ const PROJECTS = [
       "Spotify",
       "Deezer",
     ],
-    image: "../src/assets/triss.jpg",
+    image: { triss },
     live: "#",
     repo: "https://github.com/AlisonFernando/Music-Bot-Discord",
   },
@@ -103,7 +109,7 @@ const PROJECTS = [
     title: "Automações em python",
     blurb: "Script para automação de up de arquivos em pastas no Filezilla.",
     stack: ["Python", "Selenium", "Automação", "Filezilla", "Web Scraping"],
-    image: "../src/assets/robo.jpg",
+    image: { robo },
     live: "#",
     repo: "https://github.com/AlisonFernando/Automacoes-python",
   },
