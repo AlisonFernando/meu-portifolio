@@ -407,7 +407,7 @@ export default function Portfolio() {
         delay: 1.2,
       },
     ],
-    []
+    [],
   );
 
   return (
