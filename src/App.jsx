@@ -73,7 +73,7 @@ const PROJECTS = [
     repo: "https://github.com/AlisonFernando/meu-portifolio",
   },
   {
-    title: "Site temático da moto Kawasaki H2R",
+    title: "Landing page temática da moto Kawasaki H2R",
     blurb: "Lading page de exibição da moto Kawasaki H2R.",
     stack: ["HTML5", "CSS3", "JS"],
     image: kawasaki,
