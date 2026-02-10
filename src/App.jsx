@@ -28,7 +28,7 @@ import {
 
 const PROFILE = {
   name: "Alison Fernando",
-  role: "Desenvolvedor Front-end & Analista de Sistemas",
+  role: "Desenvolvedor Full-Stack & Analista de Sistemas",
   location: "Viradouro, São Paulo, Brasil",
   photoUrl: perfil,
   about:
@@ -56,11 +56,12 @@ const PROJECTS = [
   {
     title: "ETL de Commodities (Python)",
     blurb:
-      "Pipeline para padronizar, deflacionar e versionar séries históricas.",
-    stack: ["Python", "Pandas", "Parquet", "Airflow"],
+      "ETL que integra dados de web scraping e excel, salva os dados em PostgreSQL com versionamento.",
+
+    stack: ["Python", "Pandas", "PostgreSQL", "Parquet", "Web Scraping", "ETL"],
     image:
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
-    live: "#",
+    live: "#", // ou um link de demo/docs
     repo: "#",
   },
   {
@@ -70,7 +71,7 @@ const PROJECTS = [
     stack: ["React", "Framer Motion", "Tailwind"],
     image: portifolio,
     live: "#",
-    repo: "https://github.com/AlisonFernando/meu-portifolio",
+    repo: "#",
   },
   {
     title: "Landing page temática da moto Kawasaki H2R",
@@ -78,7 +79,7 @@ const PROJECTS = [
     stack: ["HTML5", "CSS3", "JS"],
     image: kawasaki,
     live: "#",
-    repo: "https://github.com/AlisonFernando/Kawasaki-Ninja-H2",
+    repo: "#",
   },
   {
     title: "Caléndario Web",
@@ -86,7 +87,7 @@ const PROJECTS = [
     stack: ["HTML5", "CSS3", "JS"],
     image: calendarioWeb,
     live: "#",
-    repo: "https://github.com/AlisonFernando/Calendario",
+    repo: "#",
   },
   {
     title: "Bot de música para Discord",
@@ -103,15 +104,26 @@ const PROJECTS = [
     ],
     image: triss,
     live: "#",
-    repo: "https://github.com/AlisonFernando/Music-Bot-Discord",
+    repo: "#",
   },
   {
-    title: "Automações em python",
-    blurb: "Script para automação de up de arquivos em pastas no Filezilla.",
-    stack: ["Python", "Selenium", "Automação", "Filezilla", "Web Scraping"],
+    title: "Automação de Upload via FileZilla (Selenium)",
+    blurb:
+      "Robô que automatiza login, navegação e upload de arquivos/pastas, com validações e tratamento de erros.",
+    stack: ["Selenium", "Automação", "FileZilla", "Web Scraping", "Python"],
     image: robo,
     live: "#",
-    repo: "https://github.com/AlisonFernando/Automacoes-python",
+    repo: "#",
+  },
+  {
+    title: "Sistema de Gestão Patrimonial",
+    blurb:
+      "Sistema para controle patrimonial com cadastro de usuários e ativos, histórico de manutenção e troca de máquinas, geração de relatórios e PDFs e rastreabilidade das relações entre usuários e equipamentos.",
+    stack: ["C#", ".NET", "MYSQL", "Entity Framework", "Relatórios", "PDF"],
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+    live: "#",
+    repo: "#",
   },
 ];
 
