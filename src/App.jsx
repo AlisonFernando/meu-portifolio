@@ -32,7 +32,7 @@ const PROFILE = {
   location: "Viradouro, São Paulo, Brasil",
   photoUrl: perfil,
   about:
-    "Crio experiências digitais com foco em clareza, velocidade e impacto visual. Curto resolver problemas complexos com interfaces simples, dados bem contados e microinterações que dão vida à página.",
+    "Desenvolvo soluções focadas em dados, automações e sistemas, transformando informações brutas em processos claros e eficientes. Uso o desenvolvimento web como suporte para visualização, controle e entrega dessas soluções.",
   skills: [
     "React",
     "TypeScript",
