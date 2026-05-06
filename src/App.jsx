@@ -28,26 +28,31 @@ import {
 
 const PROFILE = {
   name: "Alison Fernando",
-  role: "Desenvolvedor Full-Stack & Analista de Sistemas",
-  location: "Viradouro, São Paulo, Brasil",
+  role: "Desenvolvedor Full Stack focado em Automação e Dados",
+  location: "Viradouro SP, Brasil",
   photoUrl: perfil,
   about:
-    "Desenvolvo soluções focadas em dados, automações e sistemas, transformando informações brutas em processos claros e eficientes. Uso o desenvolvimento web como suporte para visualização, controle e entrega dessas soluções.",
-  skills: [
-    "React",
-    "TypeScript",
-    "Next.js",
-    "TailwindCSS",
-    "Node.js",
-    "Python",
-    "ETL",
-    "Power BI",
-    "SQL",
+    "Desenvolvo sistemas e automações que transformam processos manuais em fluxos eficientes e escaláveis. Atuo na coleta, tratamento e integração de dados, utilizando o desenvolvimento web para criar interfaces que dão visibilidade, controle e tomada de decisão sobre essas informações.",
+
+  highlights: [
+    "Automação de processos",
+    "Web scraping e coleta de dados",
+    "Integração de APIs",
+    "Criação de dashboards e sistemas internos",
   ],
+
+  skills: {
+    frontend: ["React", "TypeScript", "Next.js", "CSS"],
+    backend: ["Node.js", "Python", "PHP"],
+    databases: ["PostgreSQL", "MySQL", "MongoDB"],
+    data: ["ETL", "Pandas", "SQL"],
+    tools: ["Power BI", "Git", "APIs"],
+  },
+
   socials: {
     github: "https://github.com/AlisonFernando",
     linkedin: "https://www.linkedin.com/in/alison-fernando/",
-    email: "mailto:alisonfernando.dev@gmail.com",
+    email: "mailto:alisonteobaldo2001@gmail.com",
     cv: "/curriculo.pdf",
   },
 };
@@ -63,6 +68,8 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1200&auto=format&fit=crop",
     live: "#", // ou um link de demo/docs
     repo: "#",
+    impact:
+      "Automatizou coleta de dados de 10+ fontes e reduziu ~80% do trabalho manual",
   },
   {
     title: "Portfolio Interativo",
@@ -114,6 +121,8 @@ const PROJECTS = [
     image: robo,
     live: "#",
     repo: "#",
+    impact:
+      "Automatizou o processo de upload de arquivos e reduziu ~70% do tempo gasto em tarefas manuais",
   },
   {
     title: "Sistema de Gestão Patrimonial",
@@ -124,12 +133,14 @@ const PROJECTS = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
     live: "#",
     repo: "#",
+    impact:
+      "Implementou soluções de gestão patrimonial que melhoraram a rastreabilidade e reduziram erros de controle",
   },
 ];
 
 const TIMELINE = [
   {
-    role: "Analista de Sistemas Junior",
+    role: "Analista de Sistemas Pleno",
     company: "Scot Consultoria",
     period: "2023 — atual",
     location: "Bebedouro • SP",
@@ -436,16 +447,43 @@ export default function Portfolio() {
       {/* HERO / ABOUT */}
       <header className="relative mx-auto flex w-full max-w-6xl flex-col items-center gap-10 px-6 pt-24 md:flex-row md:gap-14 md:pt-32">
         <div className="relative order-2 w-full md:order-1 md:w-1/2">
+          {/* Nome */}
           <h1 className="text-balance text-4xl font-bold leading-tight tracking-tight md:text-6xl">
             {PROFILE.name}
           </h1>
-          <p className="mt-3 text-lg text-emerald-300/90 md:text-xl">
+
+          {/* Headline */}
+          <p className="mt-3 text-base text-emerald-400 md:text-lg">
+            Automatizando processos e transformando dados em decisões
+          </p>
+
+          {/* Role */}
+          <p className="mt-2 text-lg text-emerald-300/90 md:text-xl">
             {PROFILE.role}
           </p>
-          <p className="mt-3 max-w-xl text-sm text-slate-300/90 md:text-base">
+
+          {/* Localização */}
+          <p className="mt-1 text-xs text-slate-400">📍 {PROFILE.location}</p>
+
+          {/* About */}
+          <p className="mt-4 max-w-xl text-sm text-slate-300/90 md:text-base">
             {PROFILE.about}
           </p>
-          <div className="mt-5 flex flex-wrap items-center gap-3">
+
+          {/* Highlights */}
+          <div className="mt-4 flex flex-wrap gap-2">
+            {PROFILE.highlights.map((h, i) => (
+              <span
+                key={i}
+                className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-3 py-1 text-xs text-emerald-300"
+              >
+                {h}
+              </span>
+            ))}
+          </div>
+
+          {/* Botões */}
+          <div className="mt-6 flex flex-wrap items-center gap-3">
             <a
               href={PROFILE.socials.github}
               target="_blank"
@@ -454,6 +492,7 @@ export default function Portfolio() {
             >
               <Github className="h-4 w-4" /> GitHub
             </a>
+
             <a
               href={PROFILE.socials.linkedin}
               target="_blank"
@@ -462,12 +501,21 @@ export default function Portfolio() {
             >
               <Linkedin className="h-4 w-4" /> LinkedIn
             </a>
+
             <a
               href={PROFILE.socials.email}
-              className="inline-flex items-center gap-2 rounded-full bg-emerald-500/90 px-4 py-2 text-sm font-medium text-black hover:bg-emerald-400"
+              className="inline-flex items-center gap-2 rounded-full bg-emerald-400 px-5 py-2.5 text-sm font-semibold text-black shadow-lg shadow-emerald-400/20 hover:bg-emerald-300"
             >
               <Mail className="h-4 w-4" /> Fale comigo
             </a>
+
+            <a
+              href="#projetos"
+              className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/5"
+            >
+              <Rocket className="h-4 w-4" /> Ver projetos
+            </a>
+
             <a
               href={PROFILE.socials.cv}
               className="inline-flex items-center gap-2 rounded-full border border-white/10 px-4 py-2 text-sm hover:bg-white/5"
@@ -475,18 +523,30 @@ export default function Portfolio() {
               <MousePointer2 className="h-4 w-4" /> Currículo
             </a>
           </div>
-          <div className="mt-6 flex flex-wrap gap-2">
-            {PROFILE.skills.map((s, i) => (
-              <span
-                key={i}
-                className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-300"
-              >
-                {s}
-              </span>
+
+          {/* Skills organizadas */}
+          <div className="mt-6 space-y-3">
+            {Object.entries(PROFILE.skills).map(([category, items]) => (
+              <div key={category}>
+                <p className="mb-1 text-xs capitalize text-slate-400">
+                  {category}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {items.map((s, i) => (
+                    <span
+                      key={i}
+                      className="rounded-lg border border-white/10 bg-white/[0.03] px-3 py-1 text-xs text-slate-300"
+                    >
+                      {s}
+                    </span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </div>
 
+        {/* FOTO */}
         <div className="relative order-1 w-full md:order-2 md:w-1/2">
           <div className="relative mx-auto aspect-square w-64 overflow-hidden rounded-3xl border border-white/10 bg-white/[0.03] p-2 shadow-2xl md:w-80">
             <img
@@ -494,7 +554,7 @@ export default function Portfolio() {
               alt={`Foto de ${PROFILE.name}`}
               className="h-full w-full rounded-2xl object-cover"
             />
-            {/* Ícones flutuantes */}
+
             {!prefersReduced && (
               <>
                 {iconPositions.map((ic, idx) => (
