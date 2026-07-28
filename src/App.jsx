@@ -33,7 +33,7 @@ const PROFILE = {
   location: "Viradouro SP, Brasil",
   photoUrl: perfil,
   about:
-    "Desenvolvedor Full Stack Pleno com 2+ anos de experiência em automação de processos, engenharia e análise de dados aplicados ao agronegócio. Responsável pela coleta e integração de mais de 20 fontes de dados via web scraping e pelo desenvolvimento de 20+ APIs REST para diferentes commodities — reduzindo em até 90% o tempo de rotinas diárias de coleta e entrega de dados. Constrói plataformas de exibição de preços, dashboards e produtos digitais completos, do levantamento de dados à entrega final ao cliente.",
+    "Desenvolvedor Full Stack Pleno com 4+ anos de experiência em automação de processos, engenharia e análise de dados aplicados ao agronegócio. Responsável pela coleta e integração de mais de 20 fontes de dados via web scraping e pelo desenvolvimento de 20+ APIs REST para diferentes commodities — reduzindo em até 90% o tempo de rotinas diárias de coleta e entrega de dados. Constrói plataformas de exibição de preços, dashboards e produtos digitais completos, do levantamento de dados à entrega final ao cliente.",
 
   highlights: [
     "20+ APIs REST em produção",
